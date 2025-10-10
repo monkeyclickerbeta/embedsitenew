@@ -2,35 +2,63 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Embedded Site</title>
+  <title>Website Down</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    html, body {
-      height: 100%;
+    body {
+      background: linear-gradient(135deg, #232526, #414345);
+      color: #fff;
       margin: 0;
       padding: 0;
-      overflow: hidden;
-    }
-    #embedFrame {
-      border: none;
-      width: 100vw;
       height: 100vh;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      margin: 0;
-      padding: 0;
-      display: block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+    .container {
+      text-align: center;
+      padding: 2rem 3rem;
+      background: rgba(34, 34, 34, 0.95);
+      border-radius: 16px;
+      box-shadow: 0 8px 32px 0 rgba(0,0,0,0.3);
+    }
+    .icon {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      animation: shake 1.5s infinite;
+      display: inline-block;
+    }
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-6px); }
+      50% { transform: translateX(6px); }
+      75% { transform: translateX(-6px); }
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      font-size: 1.15rem;
+      margin-bottom: 1.5rem;
+    }
+    .footer {
+      font-size: 0.95rem;
+      color: #aaa;
     }
   </style>
 </head>
 <body>
-  <iframe
-    id="embedFrame"
-    src="https://classlinklogin.speedinsure.hk"
-    allowfullscreen
-    loading="lazy"
-  ></iframe>
+  <div class="container">
+    <div class="icon">🚧</div>
+    <h1>We're Down Right Now</h1>
+    <p>Sorry, website is currently unavailable.<br>
+       We're working hard to bring it back online.<br>
+       Please check back soon!</p>
+    <div class="footer">
+      &copy; Made By Ozzy
+    </div>
+  </div>
 </body>
 </html>
